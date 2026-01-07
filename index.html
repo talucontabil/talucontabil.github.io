@@ -15,34 +15,156 @@
             --sucesso: #25d366;
         }
 
-        body { font-family: 'Open Sans', sans-serif; margin: 0; line-height: 1.6; color: var(--texto); background-color: var(--cinza-fundo); }
-        header { background-color: var(--azul-escuro); color: var(--branco); padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--azul-claro); }
-        .logo-img { max-width: 250px; height: auto; margin-bottom: 15px; }
-        h1 { font-family: 'Montserrat', sans-serif; margin: 0; font-size: 2.2em; }
-        .tagline { font-style: italic; opacity: 0.9; margin-top: 5px; }
-        
-        .container { max-width: 1000px; margin: -40px auto 40px; padding: 0 20px; }
-        section { background: var(--branco); padding: 40px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        h2 { color: var(--azul-escuro); font-family: 'Montserrat', sans-serif; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-top: 0; }
-        
-        .grid-contato { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card-contato { background: #f1f5f9; padding: 20px; border-radius: 8px; border-left: 4px solid var(--azul-claro); }
-        .cnpj-badge { display: inline-block; background: #e2e8f0; padding: 5px 10px; border-radius: 4px; font-size: 0.9em; font-weight: bold; margin-top: 12px; color: var(--azul-escuro); }
-        
-        .cta-container { text-align: center; margin-top: 30px; }
-        .btn-whatsapp { display: inline-block; background-color: var(--sucesso); color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-whatsapp:hover { transform: translateY(-3px); background-color: #128c7e; box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
-        
-        .privacy-box { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; font-size: 0.95em; }
-        footer { background: var(--azul-escuro); color: var(--branco); text-align: center; padding: 40px 20px; }
-        @media (max-width: 600px) { h1 { font-size: 1.8em; } section { padding: 20px; } }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--texto);
+            background-color: var(--cinza-fundo);
+        }
+
+        header {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--azul-claro);
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            max-width: 200px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--branco);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--azul-escuro);
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .grid-contato {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card-contato {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul-claro);
+        }
+
+        .card-contato h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: var(--azul-escuro);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--sucesso);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background-color: #128c7e;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .email-link {
+            color: var(--azul-escuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .privacy-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #475569;
+        }
+
+        footer {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .cnpj-footer {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            section { padding: 25px 20px; }
+            .grid-contato { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="Talu Contabilidade" class="logo-img" onerror="this.style.display='none'">
+        <img src="logo.png" alt="Talu Contabilidade Logo" class="logo-img" onerror="this.style.display='none'">
     </div>
     <h1>Talu Contabilidade</h1>
     <p class="tagline">“Sua empresa organizada, seu negócio seguro.”</p>
@@ -51,40 +173,46 @@
 <div class="container">
     <section>
         <h2>Sobre Nós</h2>
-        <p>Especialistas em contabilidade para saúde, comércio e serviços em Araraquara/SP. Oferecemos soluções completas para garantir a segurança fiscal e o crescimento sustentável da sua empresa.</p>
+        <p>Somos uma contabilidade especializada em atender empresas e profissionais da saúde, comércio e serviços, oferecendo soluções completas de gestão fiscal, contábil e administrativa.</p>
+        <p>O nosso compromisso é garantir que a sua empresa esteja sempre em conformidade, permitindo que tenha total tranquilidade para focar no que realmente importa: o crescimento do seu negócio.</p>
     </section>
 
-    <section>
+    <section id="contato">
         <h2>Contatos e Endereços</h2>
         <div class="grid-contato">
             <div class="card-contato">
                 <h3>📍 Sede Fiscal</h3>
                 <p>Rua Porfírio Marques de Andrade, 1407<br>Vila Sedenho, Araraquara/SP<br>CEP: 14806-175</p>
-                <div class="cnpj-badge">CNPJ: 02.420.584/0001-80</div>
             </div>
             <div class="card-contato">
-                <h3>🏢 Atendimento Presencial</h3>
+                <h3>🏢 Atendimento ao Cliente</h3>
                 <p>Rua Barão do Rio Branco, 772<br>Vila Xavier, Araraquara/SP<br>CEP: 14810-100</p>
             </div>
         </div>
 
         <div class="cta-container">
-            <p><strong>Email:</strong> administrador@talucontabil.com.br</p>
-            <a href="https://wa.me/5516996071499" class="btn-whatsapp" target="_blank">Falar pelo WhatsApp</a>
+            <p><strong>E-mail oficial:</strong> <br>
+               <a href="mailto:administrador@talucontabil.com.br" class="email-link">administrador@talucontabil.com.br</a>
+            </p>
+            <br>
+            <a href="https://wa.me/5516996071499" class="btn-whatsapp" target="_blank">
+                Iniciar Atendimento via WhatsApp
+            </a>
         </div>
     </section>
 
-    <section>
-        <h2>🔒 Privacidade e LGPD</h2>
+    <section id="privacidade">
+        <h2>🔒 Política de Privacidade</h2>
         <div class="privacy-box">
-            <p>Tratamos os dados dos nossos clientes com sigilo absoluto e segurança tecnológica, em total conformidade com a LGPD, garantindo que suas informações sejam utilizadas apenas para fins de assessoria contábil e contato oficial.</p>
+            <p>A <strong>Talu Contabilidade</strong> valoriza a segurança da sua informação. Tratamos os seus dados com sigilo absoluto, seguindo as normas da LGPD para fins estritamente contábeis e de contato oficial.</p>
         </div>
     </section>
 </div>
 
 <footer>
     <p>&copy; 2026 Talu Contabilidade. Todos os direitos reservados.</p>
-    <p>Araraquara - SP</p>
+    <span class="cnpj-footer">CNPJ: 02.420.584/0001-80</span>
+    <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.7;">Araraquara - SP</p>
 </footer>
 
 </body>
