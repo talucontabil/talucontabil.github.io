@@ -1,100 +1,252 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talu Contabilidade</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f5f5f5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talu Contabilidade | Araraquara - SP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #1e3a8a;
+            --azul-claro: #3b82f6;
+            --branco: #ffffff;
+            --cinza-fundo: #f8fafc;
+            --texto: #334155;
+            --sucesso: #25d366;
+        }
 
-    header {
-      background-color: #1e3a8a; /* azul padrão do escritório */
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--texto);
+            background-color: var(--cinza-fundo);
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
+        header {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--azul-claro);
+        }
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1em;
-      font-style: italic;
-    }
+        .logo-container {
+            margin-bottom: 20px;
+        }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 20px auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+        /* Se tiveres o ficheiro logo.png na pasta, ele aparece aqui */
+        .logo-img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 4px;
+        }
 
-    h2 {
-      color: #1e3a8a; /* azul */
-      margin-bottom: 20px;
-      border-bottom: 2px solid #1e3a8a;
-      padding-bottom: 10px;
-    }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: -1px;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
 
-    ul li {
-      padding: 8px 0;
-    }
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
 
-    .contact p {
-      margin: 5px 0;
-    }
+        section {
+            background: var(--branco);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e3a8a;
-      color: #fff;
-      font-size: 0.9em;
-      line-height: 1.4;
-    }
+        h2 {
+            color: var(--azul-escuro);
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
 
-    a {
-      color: #fff; /* link no rodapé branco */
-      text-decoration: none;
-    }
+        .grid-contato {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .card-contato {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul-claro);
+        }
+
+        .card-contato h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: var(--azul-escuro);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--sucesso);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background-color: #128c7e;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .email-link {
+            color: var(--azul-escuro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos da Política de Privacidade */
+        .privacy-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #475569;
+        }
+
+        .privacy-box ul {
+            padding-left: 20px;
+        }
+
+        .privacy-box li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .footer-links a {
+            color: var(--branco);
+            font-size: 0.9em;
+            opacity: 0.8;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--branco);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            section { padding: 25px 20px; }
+            .grid-contato { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>Talu Contabilidade</h1>
-  <p>“Sua empresa organizada, seu negócio seguro.”</p>
+    <div class="logo-container">
+        <img src="logo.png" alt="Talu Contabilidade Logo" class="logo-img" onerror="this.style.display='none'">
+    </div>
+    <h1>Talu Contabilidade</h1>
+    <p class="tagline">“Sua empresa organizada, seu negócio seguro.”</p>
 </header>
 
-<section class="contact">
-  <h2>Contatos e Endereços</h2>
-  <p><strong>Endereço Fiscal (CNPJ):</strong> Rua Porfírio Marques de Andrade, 1407 – Vila Sedenho, Araraquara/SP – CEP: 14806-175</p>
-  <p><strong>Endereço para Atendimento:</strong> Rua Barão do Rio Branco, 772 – Vila Xavier, Araraquara/SP – CEP: 14810-100</p>
-  <p><strong>Telefone:</strong> (16) 99607-1499</p>
-  <p><strong>E-mail:</strong> <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></p>
-</section>
+<div class="container">
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma contabilidade especializada em atender empresas e profissionais da saúde, comércio e serviços, oferecendo soluções completas de gestão fiscal, contábil e administrativa.</p>
+        <p>O nosso compromisso é garantir que a sua empresa esteja sempre em conformidade, permitindo que tenha total tranquilidade para focar no que realmente importa: o crescimento do seu negócio.</p>
+    </section>
 
-<section class="about">
-  <h2>Sobre Nós</h2>
-  <p>Somos uma contabilidade especializada em atender empresas e profissionais da saúde, comércio e serviços, oferecendo soluções completas de gestão fiscal, contábil e administrativa. Nosso objetivo é simplif
+    <section id="contato">
+        <h2>Contatos e Endereços</h2>
+        <div class="grid-contato">
+            <div class="card-contato">
+                <h3>📍 Sede Fiscal</h3>
+                <p>Rua Porfírio Marques de Andrade, 1407<br>Vila Sedenho, Araraquara/SP<br>CEP: 14806-175</p>
+            </div>
+            <div class="card-contato">
+                <h3>🏢 Atendimento ao Cliente</h3>
+                <p>Rua Barão do Rio Branco, 772<br>Vila Xavier, Araraquara/SP<br>CEP: 14810-100</p>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <p><strong>E-mail oficial:</strong> <br>
+               <a href="mailto:administrador@talucontabil.com.br" class="email-link">administrador@talucontabil.com.br</a>
+            </p>
+            <br>
+            <a href="https://wa.me/5516996071499" class="btn-whatsapp" target="_blank">
+                Iniciar Atendimento via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="privacidade">
+        <h2>🔒 Política de Privacidade</h2>
+        <div class="privacy-box">
+            <p>A <strong>Talu Contabilidade</strong> valoriza a segurança da sua informação. Este resumo explica como tratamos os seus dados de acordo com a LGPD:</p>
+            <ul>
+                <li><strong>Coleta:</strong> Coletamos dados de contacto apenas quando fornecidos voluntariamente para consultas ou prestação de serviços.</li>
+                <li><strong>Finalidade:</strong> Os dados são usados exclusivamente para execução de serviços contábeis e comunicações oficiais.</li>
+                <li><strong>Proteção:</strong> Não partilhamos as suas informações com terceiros para fins comerciais.</li>
+                <li><strong>Direitos:</strong> Pode solicitar o acesso, retificação ou eliminação dos seus dados a qualquer momento através do nosso e-mail.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Talu Contabilidade. Todos os direitos reservados.</p>
+    <div class="footer-links">
+        <a href="#privacidade">Privacidade</a>
+        <a href="#contato">Contatos</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.85em; opacity: 0.7;">Araraquara - SP</p>
+</footer>
+
+</body>
+</html>
